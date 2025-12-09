@@ -41,7 +41,7 @@ import { Bluetooth, BluetoothOff, Guitar } from 'lucide-react';
 
     </div>}
       <div className='flex justify-center gap-1'>
-          <p className='flex text-3xl font-bold bg-gradient-to-r from-red-500 via-orange-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500 bg-clip-text text-transparent'>Guitar App </p>
+          <p className='flex text-3xl font-bold bg-gradient-to-r from-red-500 via-orange-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500 bg-clip-text text-transparent'>Hybrid Guitars </p>
           <Guitar size={25} strokeWidth={3} className='mt-2 text-purple-500'  />
       </div>
       <div className='flex justify-end mr-5'>
