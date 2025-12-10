@@ -1,12 +1,15 @@
 import React, { Component, useState } from 'react';
 import { Bluetooth, BluetoothOff, Guitar } from 'lucide-react';
+import { Knob } from 'primereact/knob';
+        
 
     const View = () => {
-    const [connected, setConnected] = useState(false);
-    const [value, setValue] = useState(0);
-    const [loading, setLoading] = useState(false);
-    const [info, setInfo] = useState(true)
+    const [connected, setConnected] = useState(true); //false
+    const [value, setValue] = useState(40);
+    const [loading, setLoading] = useState(false); 
+    const [info, setInfo] = useState(false); //true
     const [message, setMessage] = useState(false);
+    const [setting, setSetting] = useState(true); //false
 
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -20,11 +23,13 @@ import { Bluetooth, BluetoothOff, Guitar } from 'lucide-react';
         setMessage(true);
         await delay(1000);
         setMessage(false);
+        setSetting(true);
 
     }
 
     const value2 = () => {
         setConnected(false);
+        setSetting(false);
         setInfo(true);
         setLoading(false);
         setMessage(false);
@@ -66,6 +71,58 @@ import { Bluetooth, BluetoothOff, Guitar } from 'lucide-react';
 
 
         </div>}
+        {setting && (
+  <div className="flex justify-center mt-10">
+    <div className="flex flex-col w-full max-w-4xl w-auto items-center rounded-3xl bg-white border shadow-lg shadow-cyan-500/100 p-6 gap-5">
+
+      {/* Reihe 1: 2 Knobs */}
+      <div className="flex justify-between gap-5">
+        <div className="flex flex-col items-center">
+          <p className="mb-2 font-semibold text-lg">Volumen</p>
+          <Knob value={value} onChange={(e) => setValue(e.value)} />
+        </div>
+        <div className="flex flex-col items-center">
+          <p className="mb-2 font-semibold text-lg">Compressor</p>
+          <Knob value={value} onChange={(e) => setValue(e.value)} />
+        </div>
+      </div>
+
+      {/* Reihe 2: 2 Knobs */}
+      <div className="flex justify-between gap-5">
+        <div className="flex flex-col items-center">
+          <p className="mb-2 font-semibold text-lg">Test 1</p>
+          <Knob value={value} onChange={(e) => setValue(e.value)} />
+        </div>
+        <div className="flex flex-col items-center">
+          <p className="mb-2 font-semibold text-lg">Test 2</p>
+          <Knob value={value} onChange={(e) => setValue(e.value)} />
+        </div>
+      </div>
+
+      {/* Reihe 3: 2 Knobs */}
+      <div className="flex justify-between gap-5">
+        <div className="flex flex-col items-center">
+          <p className="mb-2 font-semibold text-lg">Test 3</p>
+          <Knob value={value} onChange={(e) => setValue(e.value)} />
+        </div>
+        <div className="flex flex-col items-center">
+          <p className="mb-2 font-semibold text-lg">Test 4</p>
+          <Knob value={value} onChange={(e) => setValue(e.value)} />
+        </div>
+      </div>
+
+    </div>
+  </div>
+)}
+
+
+
+
+
+
+
+
+
       </>
     )
 }
