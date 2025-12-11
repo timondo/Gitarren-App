@@ -87,7 +87,7 @@ const View = () => {
 
       {info && (
         <div className="flex justify-center">
-          <img className="flex justify mt-32 rounded-3xl shadow-2xl shadow-cyan-500/100" src="/tenor.gif"></img>
+          <img className="flex justify mt-10 w-40 h-40 rounded-full  shadow-2xl shadow-cyan-500/100" src="/tenor.gif"></img>
         </div>
       )}
 
