@@ -4,11 +4,11 @@ import { Knob } from "primereact/knob";
 
 const View = () => {
   // --- Bluetooth / UI States ---
-  const [connected, setConnected] = useState(true);
+  const [connected, setConnected] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [info, setInfo] = useState(false);
+  const [info, setInfo] = useState(true);
   const [message, setMessage] = useState(false);
-  const [setting, setSetting] = useState(true);
+  const [setting, setSetting] = useState(false);
 
   // --- Gitarren-Regler States ---
   const [volume, setVolume] = useState(50);
