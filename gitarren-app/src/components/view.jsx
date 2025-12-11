@@ -85,6 +85,12 @@ const View = () => {
         </div>
       )}
 
+      {info && (
+        <div className="flex justify-center">
+          <img className="flex justify mt-32 rounded-3xl shadow-2xl shadow-cyan-500/100" src="/tenor.gif"></img>
+        </div>
+      )}
+
       {/* Loading */}
       {loading && (
         <div className="flex justify-center">
