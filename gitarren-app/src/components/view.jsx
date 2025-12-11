@@ -18,6 +18,14 @@ const View = () => {
   const [mid, setMid] = useState(45);
   const [treble, setTreble] = useState(70);
 
+  // --- Effekt-Regler States ---
+  const [compressor, setCompressor] = useState(30);
+  const [distortion, setDistortion] = useState(20);
+  const [reverb, setReverb] = useState(40);
+  const [delayFx, setDelayFx] = useState(35);
+  const [chorus, setChorus] = useState(25);
+  const [fuzz, setFuzz] = useState(15);
+
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   const value1 = async () => {
@@ -105,6 +113,7 @@ const View = () => {
       {setting && (
         <div className="flex justify-center mt-10">
           <div className="flex flex-col w-full max-w-4xl items-center rounded-3xl bg-white border shadow-lg shadow-cyan-500/100 p-6 gap-8">
+
             {/* Reihe 1 */}
             <div className="flex justify-between gap-10">
               <div className="flex flex-col items-center">
@@ -143,6 +152,46 @@ const View = () => {
                 <Knob value={treble} onChange={(e) => setTreble(e.value)} />
               </div>
             </div>
+
+            {/* Reihe 4 - Compressor + Distortion */}
+            <div className="flex justify-between gap-10">
+              <div className="flex flex-col items-center">
+                <p className="mb-2 font-semibold text-lg">Compressor</p>
+                <Knob value={compressor} onChange={(e) => setCompressor(e.value)} />
+              </div>
+
+              <div className="flex flex-col items-center">
+                <p className="mb-2 font-semibold text-lg">Distortion</p>
+                <Knob value={distortion} onChange={(e) => setDistortion(e.value)} />
+              </div>
+            </div>
+
+            {/* Reihe 5 - Reverb + Delay */}
+            <div className="flex justify-between gap-10">
+              <div className="flex flex-col items-center">
+                <p className="mb-2 font-semibold text-lg">Reverb</p>
+                <Knob value={reverb} onChange={(e) => setReverb(e.value)} />
+              </div>
+
+              <div className="flex flex-col items-center">
+                <p className="mb-2 font-semibold text-lg">Delay</p>
+                <Knob value={delayFx} onChange={(e) => setDelayFx(e.value)} />
+              </div>
+            </div>
+
+            {/* Reihe 6 - Chorus + Fuzz */}
+            <div className="flex justify-between gap-10">
+              <div className="flex flex-col items-center">
+                <p className="mb-2 font-semibold text-lg">Chorus</p>
+                <Knob value={chorus} onChange={(e) => setChorus(e.value)} />
+              </div>
+
+              <div className="flex flex-col items-center">
+                <p className="mb-2 font-semibold text-lg">Fuzz</p>
+                <Knob value={fuzz} onChange={(e) => setFuzz(e.value)} />
+              </div>
+            </div>
+
           </div>
         </div>
       )}
