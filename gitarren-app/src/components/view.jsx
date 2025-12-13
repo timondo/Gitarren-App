@@ -152,7 +152,7 @@ const [tremolo, setTremolo] = useState(20);       // hinzugefügt
 
               <div className="flex flex-col items-center">
                 <p className="mb-2 font-semibold text-lg">Overdrive</p>
-                <Knob value={distortion} onChange={(e) => setOverdrive(e.value)} />
+                <Knob value={overdrive} onChange={(e) => setOverdrive(e.value)} />
               </div>
             </div>
 
@@ -160,12 +160,12 @@ const [tremolo, setTremolo] = useState(20);       // hinzugefügt
             <div className="flex justify-between gap-10">
               <div className="flex flex-col items-center">
                 <p className="mb-2 font-semibold text-lg">Distortion</p>
-                <Knob value={reverb} onChange={(e) => setDistortion(e.value)} />
+                <Knob value={distortion} onChange={(e) => setDistortion(e.value)} />
               </div>
 
               <div className="flex flex-col items-center">
                 <p className="mb-2 font-semibold text-lg">Fuzz</p>
-                <Knob value={delayFx} onChange={(e) => setFuzz(e.value)} />
+                <Knob value={fuzz} onChange={(e) => setFuzz(e.value)} />
               </div>
             </div>
 
@@ -173,12 +173,12 @@ const [tremolo, setTremolo] = useState(20);       // hinzugefügt
             <div className="flex justify-between gap-10">
               <div className="flex flex-col items-center">
                 <p className="mb-2 font-semibold text-lg">EQ</p>
-                <Knob value={chorus} onChange={(e) => setEq(e.value)} />
+                <Knob value={eq} onChange={(e) => setEq(e.value)} />
               </div>
 
               <div className="flex flex-col items-center">
                 <p className="mb-2 font-semibold text-lg">Noise Gate</p>
-                <Knob value={fuzz} onChange={(e) => setNoiseGate(e.value)} />
+                <Knob value={noiseGate} onChange={(e) => setNoiseGate(e.value)} />
               </div>
             </div>
           
@@ -194,12 +194,12 @@ const [tremolo, setTremolo] = useState(20);       // hinzugefügt
             <div className="flex justify-between gap-10">
               <div className="flex flex-col items-center">
                 <p className="mb-2 font-semibold text-lg">Chorus</p>
-                <Knob value={compressor} onChange={(e) => setChorus(e.value)} />
+                <Knob value={chorus} onChange={(e) => setChorus(e.value)} />
               </div>
 
               <div className="flex flex-col items-center">
                 <p className="mb-2 font-semibold text-lg">Phaser</p>
-                <Knob value={distortion} onChange={(e) => setPhaser(e.value)} />
+                <Knob value={phaser} onChange={(e) => setPhaser(e.value)} />
               </div>
             </div>
 
@@ -207,7 +207,7 @@ const [tremolo, setTremolo] = useState(20);       // hinzugefügt
             <div className="flex justify-between gap-10">
               <div className="flex flex-col items-center">
                 <p className="mb-2 font-semibold text-lg">Flanger</p>
-                <Knob value={reverb} onChange={(e) => setFlanger(e.value)} />
+                <Knob value={flanger} onChange={(e) => setFlanger(e.value)} />
               </div>
 
               <div className="flex flex-col items-center">
@@ -220,12 +220,12 @@ const [tremolo, setTremolo] = useState(20);       // hinzugefügt
             <div className="flex justify-between gap-10">
               <div className="flex flex-col items-center">
                 <p className="mb-2 font-semibold text-lg">Reverb</p>
-                <Knob value={chorus} onChange={(e) => setReverb(e.value)} />
+                <Knob value={reverb} onChange={(e) => setReverb(e.value)} />
               </div>
 
               <div className="flex flex-col items-center">
                 <p className="mb-2 font-semibold text-lg">Tremolo</p>
-                <Knob value={fuzz} onChange={(e) => setTremolo(e.value)} />
+                <Knob value={tremolo} onChange={(e) => setTremolo(e.value)} />
               </div>
             </div>
           
